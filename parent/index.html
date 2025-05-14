@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent Project</title>
+    <link rel="stylesheet" crossorigin href="/index-D8b4DHJx.css" />
+  </head>
+  <body>
+    <h1>This is the parent app</h1>
+
+    <div id="root"></div>
+    <script>
+      const baseUrl = "http://localhost:3000";
+      // create a script tag
+      let newTag = document.createElement("script");
+      newTag.src = `${baseUrl}/loadProject.js`;
+
+      // load another file
+      let scriptElement = document.getElementsByTagName("script")[0];
+      scriptElement.parentElement.appendChild(newTag);
+    </script>
+  </body>
+</html>
